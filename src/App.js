@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-component';
 import "./App.css";
 
 function App() {
@@ -22,12 +23,19 @@ function App() {
       <img src={props.data.hdurl}></img>
     </div>
   }
+
+  const StyledDiv = style.div `
+    color: blue;
+  `
+
+
+  
   
   return (
-    <div className="App">
+    <StyledDiv>
       <h1>Nasa Photo of the Day</h1>
       <NasaImage data={data} />
-    </div>
+    </ StyledDiv>
   );
 }
 
